@@ -2,7 +2,8 @@
 
 Personal site for [tomergee.com](https://tomergee.com). One static file, no build step.
 
-- `index.html` — the whole site (name, tagline, three links). Edit it directly.
+- `index.html` — the landing page (name, tagline, link list). Edit it directly.
+- `yosemite/index.html` — Yosemite field plan, served at `/yosemite/`.
 - `CNAME` — custom domain for GitHub Pages.
 
 ## Local preview

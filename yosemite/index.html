@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Yosemite Field Plan — trip document for a party of 6, 2 vehicles, from Irvine -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yosemite Field Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pine:#1B3A2F; --pine-2:#244C3D;
+    --granite:#47515A; --granite-soft:#6A727A;
+    --sequoia:#B5533B; --waterfall:#2E6E7E; --meadow:#6E8F5E;
+    --paper:#E9ECE4; --surface:#F4F5EF; --surface-2:#EFF1E9;
+    --line:#CBD1C1; --line-soft:#DDE1D5;
+    --ink:#20302A; --ink-soft:#4C574F;
+    --shadow:0 1px 2px rgba(27,58,47,.06),0 8px 28px rgba(27,58,47,.08);
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Spectral",Georgia,serif; font-size:17px; line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:900px; margin:0 auto; padding:0 22px 90px}
+
+  /* ---------- masthead ---------- */
+  .mast{padding:64px 0 30px; border-bottom:2px solid var(--pine)}
+  .eyebrow{
+    font-family:"Space Mono",monospace; font-size:12.5px; letter-spacing:.32em;
+    text-transform:uppercase; color:var(--sequoia); margin:0 0 14px;
+  }
+  h1{
+    font-family:"Bricolage Grotesque",system-ui,sans-serif; font-weight:800;
+    font-size:clamp(52px,13vw,120px); line-height:.9; letter-spacing:-.03em;
+    color:var(--pine); margin:0;
+  }
+  .mast .sub{
+    font-size:clamp(18px,2.4vw,22px); color:var(--ink-soft); font-style:italic;
+    margin:16px 0 26px; max-width:44ch;
+  }
+  .facts{
+    display:flex; flex-wrap:wrap; gap:8px;
+    font-family:"Space Mono",monospace; font-size:12px; letter-spacing:.04em;
+  }
+  .facts span{
+    background:var(--surface); border:1px solid var(--line);
+    padding:6px 11px; border-radius:999px; color:var(--granite);
+    white-space:nowrap;
+  }
+
+  /* ---------- section frame ---------- */
+  .section{padding:56px 0 8px}
+  .sec-head{display:flex; align-items:baseline; gap:16px; margin-bottom:8px}
+  .sec-num{
+    font-family:"Space Mono",monospace; font-weight:700; font-size:15px;
+    color:var(--sequoia); padding-top:6px;
+  }
+  .section.logistics .sec-num{color:var(--waterfall)}
+  h2{
+    font-family:"Bricolage Grotesque",sans-serif; font-weight:700;
+    font-size:clamp(30px,5vw,44px); line-height:1.02; letter-spacing:-.02em;
+    color:var(--pine); margin:0;
+  }
+  .lede{font-size:18.5px; color:var(--ink-soft); max-width:62ch; margin:18px 0 30px}
+
+  /* ---------- map ---------- */
+  figure.map{margin:8px 0 12px}
+  .map-frame{
+    background:var(--surface); border:1px solid var(--line);
+    border-radius:16px; padding:14px; box-shadow:var(--shadow); overflow:hidden;
+  }
+  .map-frame svg{display:block; width:100%; height:auto}
+  figcaption{
+    font-family:"Space Mono",monospace; font-size:11.5px; letter-spacing:.03em;
+    color:var(--granite-soft); text-align:center; margin-top:12px;
+  }
+
+  /* ---------- station cards ---------- */
+  .h3{
+    font-family:"Bricolage Grotesque",sans-serif; font-weight:700;
+    font-size:16px; letter-spacing:.02em; text-transform:uppercase;
+    color:var(--pine); margin:40px 0 18px; display:flex; align-items:center; gap:12px;
+  }
+  .h3::after{content:""; flex:1; height:1px; background:var(--line)}
+  .stations{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+  .station{
+    background:var(--surface); border:1px solid var(--line); border-radius:14px;
+    padding:20px 20px 22px; position:relative; box-shadow:var(--shadow);
+  }
+  .station .idx{
+    font-family:"Bricolage Grotesque",sans-serif; font-weight:800; font-size:13px;
+    color:#fff; background:var(--sequoia); width:30px; height:30px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center; margin-bottom:14px;
+  }
+  .station h4{
+    font-family:"Bricolage Grotesque",sans-serif; font-weight:700; font-size:21px;
+    letter-spacing:-.01em; color:var(--pine); margin:0 0 12px; line-height:1.1;
+  }
+  .chips{display:flex; flex-wrap:wrap; gap:6px; margin:0 0 13px}
+  .chip{
+    font-family:"Space Mono",monospace; font-size:10.5px; letter-spacing:.03em;
+    text-transform:uppercase; padding:4px 9px; border-radius:6px;
+    background:var(--surface-2); border:1px solid var(--line-soft); color:var(--granite);
+  }
+  .chip.drive{background:#F3E7E2; border-color:#E4C9BF; color:#8f3f2c}
+  .chip.shuttle{background:#E1EFF1; border-color:#BFDCE0; color:#20606e}
+  .station p{margin:0; font-size:15.5px; line-height:1.55; color:var(--ink-soft)}
+
+  /* ---------- itinerary timeline ---------- */
+  .timeline{border-left:2px solid var(--line); margin:6px 0 0; padding:2px 0}
+  .day{position:relative; padding:0 0 26px 30px}
+  .day:last-child{padding-bottom:4px}
+  .day::before{
+    content:""; position:absolute; left:-8px; top:4px; width:14px; height:14px;
+    border-radius:50%; background:var(--meadow); border:3px solid var(--paper);
+  }
+  .day .tag{
+    font-family:"Space Mono",monospace; font-size:11px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--sequoia); font-weight:700;
+  }
+  .day h4{
+    font-family:"Bricolage Grotesque",sans-serif; font-weight:700; font-size:19px;
+    color:var(--pine); margin:3px 0 6px;
+  }
+  .day p{margin:0; color:var(--ink-soft); font-size:15.5px}
+
+  /* ---------- callout ---------- */
+  .callout{
+    background:var(--pine); color:#EAF0E9; border-radius:16px;
+    padding:26px 28px; margin:30px 0; box-shadow:var(--shadow);
+  }
+  .callout .k{
+    font-family:"Space Mono",monospace; font-size:11.5px; letter-spacing:.24em;
+    text-transform:uppercase; color:#9DBFAE; margin:0 0 10px;
+  }
+  .callout p{margin:0; font-size:17px; line-height:1.6}
+  .callout strong{color:#fff}
+
+  /* ---------- tables ---------- */
+  .tbl-wrap{overflow-x:auto; border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow); margin:8px 0 6px}
+  table{border-collapse:collapse; width:100%; min-width:520px; background:var(--surface)}
+  thead th{
+    font-family:"Space Mono",monospace; font-size:11px; letter-spacing:.06em;
+    text-transform:uppercase; text-align:left; color:#fff; background:var(--waterfall);
+    padding:12px 15px; font-weight:700;
+  }
+  tbody td{padding:13px 15px; border-top:1px solid var(--line-soft); font-size:15px; color:var(--ink-soft); vertical-align:top}
+  tbody tr:nth-child(even){background:var(--surface-2)}
+  td .mode{font-family:"Space Mono",monospace; font-size:11px; font-weight:700; letter-spacing:.03em}
+  .mode.d{color:#8f3f2c} .mode.s{color:#20606e}
+  td strong{color:var(--pine); font-weight:600; font-family:"Bricolage Grotesque",sans-serif; font-size:15px}
+
+  /* ---------- info blocks ---------- */
+  .block{margin:26px 0}
+  .block h3{
+    font-family:"Bricolage Grotesque",sans-serif; font-weight:700; font-size:20px;
+    color:var(--pine); margin:0 0 8px; letter-spacing:-.01em;
+  }
+  .block p{margin:0 0 10px; color:var(--ink-soft)}
+  .note{
+    font-family:"Space Mono",monospace; font-size:13px; color:var(--waterfall);
+    background:#E4F0F2; border:1px dashed #A8CED4; border-radius:10px;
+    padding:12px 15px; letter-spacing:.02em;
+  }
+  .note b{color:var(--pine)}
+
+  footer{
+    margin-top:56px; padding-top:22px; border-top:1px solid var(--line);
+    font-family:"Space Mono",monospace; font-size:12px; color:var(--granite-soft);
+    letter-spacing:.02em; line-height:1.7;
+  }
+
+  @media (max-width:640px){
+    body{font-size:16px}
+    .stations{grid-template-columns:1fr}
+    .mast{padding:44px 0 24px}
+    .section{padding:44px 0 4px}
+  }
+  @media (prefers-reduced-motion:no-preference){
+    .section,.mast{animation:rise .6s ease both}
+    .section{animation-delay:.05s}
+  }
+  @keyframes rise{from{opacity:0; transform:translateY(10px)}to{opacity:1; transform:none}}
+
+  @media print{
+    body{background:#fff}
+    .station,.tbl-wrap,.map-frame,.callout{box-shadow:none}
+    .station,.day,.tbl-wrap{break-inside:avoid}
+    .section{animation:none}
+  }
+</style>
+
+<div class="wrap">
+
+  <!-- ============ MASTHEAD ============ -->
+  <header class="mast">
+    <p class="eyebrow">Field Plan · Summer 2026</p>
+    <h1>Yosemite</h1>
+    <p class="sub">Five landmarks over three nights at Evergreen Lodge — a car-light plan for six travelers driving up from Irvine, Aug 1–4.</p>
+    <div class="facts">
+      <span>6 TRAVELERS</span>
+      <span>2 VEHICLES</span>
+      <span>EVERGREEN LODGE</span>
+      <span>AUG 1–4 · SAT–TUE</span>
+      <span>ENTER VIA BIG OAK FLAT</span>
+    </div>
+  </header>
+
+  <!-- ============ SECTION 01 ============ -->
+  <section class="section sights">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <h2>The Sights &amp; The Plan</h2>
+    </div>
+    <p class="lede">From your base at Evergreen Lodge you'll enter through Big Oak Flat (Hwy 120), about 45 minutes from the valley floor. The five highlights split into two clusters — the valley itself and the Wawona corridor to the south — which is exactly how the days below are grouped.</p>
+
+    <!-- ---- MAP ---- -->
+    <figure class="map">
+      <div class="map-frame">
+        <svg viewBox="0 0 900 690" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schematic map of Yosemite showing the five top sites, entrances, lodges and parking">
+          <!-- backdrop -->
+          <rect x="0" y="0" width="900" height="690" fill="#EFF1E9"/>
+          <!-- topographic contour suggestion (high country / Half Dome) -->
+          <g transform="rotate(-12 710 250)" fill="none" stroke="#C4CCB6" stroke-width="1.4" opacity="0.7">
+            <ellipse cx="710" cy="250" rx="150" ry="96"/>
+            <ellipse cx="710" cy="250" rx="118" ry="74"/>
+            <ellipse cx="710" cy="250" rx="88" ry="55"/>
+            <ellipse cx="710" cy="250" rx="58" ry="37"/>
+            <ellipse cx="710" cy="250" rx="30" ry="19"/>
+          </g>
+
+          <!-- ===== ROADS ===== -->
+          <!-- Hwy 41 (south entrance -> Wawona -> Tunnel View -> valley) -->
+          <path d="M370 640 C 384 588 408 548 416 520 C 424 496 428 482 430 470 C 414 418 400 358 392 320 L 410 302"
+                fill="none" stroke="#B08A6B" stroke-width="6" stroke-linecap="round"/>
+          <!-- Hwy 120 Big Oak Flat — YOUR ENTRY ROUTE -->
+          <path d="M228 158 C 300 200 360 244 402 274" fill="none" stroke="#2E6E7E" stroke-width="7" stroke-linecap="round"/>
+          <text x="300" y="210" font-family="'Space Mono',monospace" font-size="10" font-weight="700" fill="#20606e" transform="rotate(20 300 210)">YOUR ENTRY</text>
+          <!-- Hwy 140 Arch Rock -->
+          <path d="M208 316 C 282 306 352 302 396 300" fill="none" stroke="#B08A6B" stroke-width="6" stroke-linecap="round"/>
+          <!-- Glacier Point Rd (seasonal, dashed) -->
+          <path d="M430 470 C 486 462 542 452 572 446" fill="none" stroke="#B08A6B" stroke-width="5"
+                stroke-linecap="round" stroke-dasharray="3 11"/>
+
+          <!-- ===== VALLEY FLOOR ===== -->
+          <rect x="398" y="258" width="268" height="66" rx="33" fill="#DBE7CF" stroke="#A9BE93" stroke-width="1.5"/>
+          <text x="532" y="296" text-anchor="middle" font-family="'Space Mono',monospace" font-size="12"
+                letter-spacing="2" fill="#5C7A53">YOSEMITE VALLEY</text>
+
+          <!-- Half Dome glyph -->
+          <path d="M672 258 C 676 232 700 226 718 236 L 720 258 Z" fill="#A7ADB2" stroke="#fff" stroke-width="1.5"/>
+          <text x="726" y="240" font-family="'Space Mono',monospace" font-size="10.5" fill="#6A727A">Half Dome</text>
+
+          <!-- ===== ENTRANCES (teal) ===== -->
+          <g font-family="'Space Mono',monospace" font-size="10.5" fill="#20606e" font-weight="700">
+            <circle cx="228" cy="158" r="9" fill="#2E6E7E" stroke="#fff" stroke-width="2"/>
+            <text x="242" y="150">BIG OAK FLAT</text><text x="242" y="163" fill="#6A727A" font-weight="400">HWY 120</text>
+            <circle cx="208" cy="316" r="9" fill="#2E6E7E" stroke="#fff" stroke-width="2"/>
+            <text x="222" y="309">ARCH ROCK</text><text x="222" y="322" fill="#6A727A" font-weight="400">HWY 140</text>
+            <circle cx="370" cy="640" r="9" fill="#2E6E7E" stroke="#fff" stroke-width="2"/>
+            <text x="384" y="637">SOUTH ENTRANCE · HWY 41</text>
+          </g>
+
+          <!-- ===== LODGES (green diamonds) ===== -->
+          <g>
+            <!-- BASE: Evergreen Lodge -->
+            <circle cx="150" cy="120" r="17" fill="#1B3A2F" stroke="#fff" stroke-width="2.5"/>
+            <text x="150" y="126" text-anchor="middle" font-size="16" fill="#F2C94C">★</text>
+            <text x="150" y="92" text-anchor="middle" font-family="'Space Mono',monospace" font-size="9" letter-spacing="1.5" fill="#B5533B" font-weight="700">YOUR BASE</text>
+            <text x="150" y="150" text-anchor="middle" font-family="'Bricolage Grotesque',sans-serif" font-size="13" font-weight="800" fill="#1B3A2F">Evergreen Lodge</text>
+            <text x="150" y="164" text-anchor="middle" font-family="'Space Mono',monospace" font-size="9" fill="#5C7A53">~45 min to valley</text>
+
+
+          </g>
+
+          <!-- ===== PARKING (granite squares) ===== -->
+          <g>
+            <rect x="509" y="281" width="22" height="22" rx="4" fill="#47515A"/>
+            <text x="520" y="297" text-anchor="middle" font-family="'Bricolage Grotesque',sans-serif" font-size="14" font-weight="800" fill="#fff">P</text>
+            <text x="520" y="322" text-anchor="middle" font-family="'Space Mono',monospace" font-size="9" fill="#47515A">Village</text>
+
+            <rect x="597" y="309" width="22" height="22" rx="4" fill="#47515A"/>
+            <text x="608" y="325" text-anchor="middle" font-family="'Bricolage Grotesque',sans-serif" font-size="14" font-weight="800" fill="#fff">P</text>
+            <text x="608" y="350" text-anchor="middle" font-family="'Space Mono',monospace" font-size="9" fill="#47515A">Curry</text>
+          </g>
+
+          <!-- ===== SITES (numbered rust circles) ===== -->
+          <g font-family="'Bricolage Grotesque',sans-serif" font-weight="800" font-size="15" text-anchor="middle">
+            <!-- 1 Tunnel View -->
+            <circle cx="392" cy="320" r="16" fill="#B5533B" stroke="#fff" stroke-width="3"/>
+            <text x="392" y="325" fill="#fff">1</text>
+            <text x="372" y="348" text-anchor="end" font-family="'Space Mono',monospace" font-weight="700" font-size="11" fill="#20302A">TUNNEL VIEW</text>
+            <!-- 2 Yosemite Falls -->
+            <circle cx="472" cy="240" r="16" fill="#B5533B" stroke="#fff" stroke-width="3"/>
+            <text x="472" y="245" fill="#fff">2</text>
+            <text x="472" y="222" font-family="'Space Mono',monospace" font-weight="700" font-size="11" fill="#20302A">YOSEMITE FALLS</text>
+            <!-- 3 Glacier Point -->
+            <circle cx="575" cy="446" r="16" fill="#B5533B" stroke="#fff" stroke-width="3"/>
+            <text x="575" y="451" fill="#fff">3</text>
+            <text x="596" y="450" text-anchor="start" font-family="'Space Mono',monospace" font-weight="700" font-size="11" fill="#20302A">GLACIER POINT</text>
+            <!-- 4 Mariposa Grove -->
+            <circle cx="455" cy="585" r="16" fill="#B5533B" stroke="#fff" stroke-width="3"/>
+            <text x="455" y="590" fill="#fff">4</text>
+            <text x="476" y="589" text-anchor="start" font-family="'Space Mono',monospace" font-weight="700" font-size="11" fill="#20302A">MARIPOSA GROVE</text>
+            <!-- 5 Mist Trail -->
+            <circle cx="650" cy="300" r="16" fill="#B5533B" stroke="#fff" stroke-width="3"/>
+            <text x="650" y="305" fill="#fff">5</text>
+            <text x="668" y="290" text-anchor="start" font-family="'Space Mono',monospace" font-weight="700" font-size="11" fill="#20302A">MIST TRAIL</text>
+            <text x="668" y="303" text-anchor="start" font-family="'Space Mono',monospace" font-weight="400" font-size="9.5" fill="#6A727A">Happy Isles</text>
+          </g>
+
+          <!-- ===== COMPASS ===== -->
+          <g transform="translate(842 66)">
+            <circle r="20" fill="#F4F5EF" stroke="#CBD1C1"/>
+            <path d="M0 -14 L5 4 L0 -1 L-5 4 Z" fill="#B5533B"/>
+            <text x="0" y="-22" text-anchor="middle" font-family="'Space Mono',monospace" font-size="11" font-weight="700" fill="#47515A">N</text>
+          </g>
+
+          <!-- ===== LEGEND ===== -->
+          <g transform="translate(34 474)">
+            <rect x="0" y="0" width="252" height="196" rx="12" fill="#F4F5EF" stroke="#CBD1C1"/>
+            <text x="18" y="28" font-family="'Space Mono',monospace" font-size="12" font-weight="700" letter-spacing="2" fill="#47515A">LEGEND</text>
+            <g font-family="'Spectral',serif" font-size="13.5" fill="#4C574F">
+              <circle cx="26" cy="52" r="10" fill="#B5533B"/><text x="46" y="57">Must-see site</text>
+              <circle cx="26" cy="84" r="11" fill="#1B3A2F"/><text x="26" y="89" text-anchor="middle" font-size="12" fill="#F2C94C">★</text><text x="46" y="89">Your base (Evergreen)</text>
+              <rect x="17" y="105" width="18" height="18" rx="3" fill="#47515A"/><text x="26" y="118" text-anchor="middle" font-family="'Bricolage Grotesque'" font-size="12" font-weight="800" fill="#fff">P</text><text x="46" y="118">Day-use parking</text>
+              <circle cx="26" cy="143" r="8" fill="#2E6E7E"/><text x="46" y="148">Park entrance</text>
+              <line x1="16" y1="168" x2="36" y2="168" stroke="#2E6E7E" stroke-width="5" stroke-linecap="round"/><text x="46" y="173">Your entry</text>
+              <line x1="150" y1="168" x2="170" y2="168" stroke="#B08A6B" stroke-width="5" stroke-linecap="round"/><text x="178" y="173">Highway</text>
+            </g>
+          </g>
+
+          <text x="866" y="678" text-anchor="end" font-family="'Space Mono',monospace" font-size="10" fill="#9AA396">Schematic — not to scale</text>
+        </svg>
+      </div>
+      <figcaption>In early August everything's open — but Yosemite Falls (2) often slows to a trickle by late summer. See the day plan for how the sites group.</figcaption>
+    </figure>
+
+    <!-- ---- STATIONS ---- -->
+    <p class="h3">The Five Sites</p>
+    <div class="stations">
+      <article class="station">
+        <div class="idx">1</div>
+        <h4>Tunnel View</h4>
+        <div class="chips"><span class="chip drive">Drive · no shuttle</span><span class="chip">No hiking</span><span class="chip">Sunset best</span></div>
+        <p>The postcard shot — El Capitan, Bridalveil Fall, and Half Dome in one frame. It's right on Hwy 41 as you drive in, so make it your arrival-evening stop. Small lots on both sides; come 45 min before sunset.</p>
+      </article>
+      <article class="station">
+        <div class="idx">2</div>
+        <h4>Yosemite Falls</h4>
+        <div class="chips"><span class="chip shuttle">Shuttle</span><span class="chip">Easy → strenuous</span></div>
+        <p>Tallest waterfall in North America. The Lower Falls loop is a flat, 1-mile stroll anyone can do; the Upper Falls trail is a lung-busting 7.2-mile round trip. Ride the Valleywide shuttle to the Lower Yosemite Fall stop.</p>
+      </article>
+      <article class="station">
+        <div class="idx">3</div>
+        <h4>Glacier Point</h4>
+        <div class="chips"><span class="chip drive">Drive · ~1 hr</span><span class="chip">Seasonal</span><span class="chip">Short paved walk</span></div>
+        <p>A 3,200-ft aerial view over the valley and Half Dome. Drive up Glacier Point Rd (summer–fall only) or take the paid tour bus from Yosemite Valley Lodge. Best light is morning.</p>
+      </article>
+      <article class="station">
+        <div class="idx">4</div>
+        <h4>Mariposa Grove</h4>
+        <div class="chips"><span class="chip shuttle">Mandatory shuttle</span><span class="chip">Seasonal</span></div>
+        <p>500+ giant sequoias, including the ~3,000-year-old Grizzly Giant. Park at the Welcome Plaza near the south entrance and ride the free grove shuttle. Pairs naturally with a south-end lodging base.</p>
+      </article>
+      <article class="station">
+        <div class="idx">5</div>
+        <h4>Mist Trail / Half Dome</h4>
+        <div class="chips"><span class="chip shuttle">Shuttle only</span><span class="chip">Strenuous</span><span class="chip">Permit for cables</span></div>
+        <p>Cars can't reach the Happy Isles trailhead — take the East Valley shuttle. The Mist Trail soaks you at Vernal Fall (~3 mi RT) or pushes on to Nevada Fall (~6 mi). Half Dome's cables need a lottery permit.</p>
+      </article>
+    </div>
+
+    <!-- ---- ITINERARY ---- -->
+    <p class="h3">Your Days · Aug 1–4</p>
+    <div class="timeline">
+      <div class="day">
+        <span class="tag">Sat, Aug 1 · Drive up</span>
+        <h4>Irvine → Evergreen Lodge</h4>
+        <p>Leave by 6 AM — it's ~6½ hrs to Evergreen via Hwy 120 through Groveland, longer with summer traffic. Arrive mid-afternoon, settle in, keep the evening easy. (Big drive plus a Saturday valley = save the sights for the quieter days.)</p>
+      </div>
+      <div class="day">
+        <span class="tag">Sun, Aug 2 · South corridor</span>
+        <h4>Tunnel View → Glacier Point → Mariposa Grove</h4>
+        <p>Take the drive-heavy south day on the busiest day, when you <em>want</em> to be out of the packed valley. All three line up along the Wawona corridor: Tunnel View for the classic overlook, up to Glacier Point, then the sequoias at Mariposa Grove. Budget real windshield time — it's ~1½ hrs each way from Evergreen.</p>
+      </div>
+      <div class="day">
+        <span class="tag">Mon, Aug 3 · Valley floor</span>
+        <h4>Yosemite Falls &amp; the Mist Trail</h4>
+        <p>Save the valley for Monday, when parking and shuttles ease up. Enter early via Big Oak Flat, park once at Yosemite Village, and shuttle between Yosemite Falls, El Cap Meadow and Bridalveil — then Curry Village to the East Valley shuttle for the Mist Trail.</p>
+      </div>
+      <div class="day">
+        <span class="tag">Tue, Aug 4 · Drive home</span>
+        <h4>Evergreen → Irvine</h4>
+        <p>Pack and roll out by 8–9 AM to stay ahead of gate traffic, and you'll be home for dinner.</p>
+      </div>
+    </div>
+
+    <p class="note" style="margin-top:24px"><b>August heads-up:</b> Yosemite Falls runs on snowmelt and is often low — or bone dry — by early August, so treat it as a viewpoint, not a gusher. The Mist Trail's Vernal &amp; Nevada Falls (Merced River) hold up far better. It's also peak heat and peak crowds: start early, carry plenty of water.</p>
+
+    <p style="font-size:15px;color:var(--ink-soft);margin-top:14px"><em>Optional swap —</em> that south day is a lot of driving from a north base. Evergreen sits close to Tioga Road, so if the group would rather cut windshield time, trade Glacier Point + Mariposa Grove for the high country: Olmsted Point, Tenaya Lake and Tuolumne Meadows are roughly an hour east and spectacular in August.</p>
+  </section>
+
+  <!-- ============ SECTION 02 ============ -->
+  <section class="section logistics">
+    <div class="sec-head">
+      <span class="sec-num">02</span>
+      <h2>Getting Around</h2>
+    </div>
+    <p class="lede">The park's own rule sets the whole strategy: <em>if you find a parking space, leave your car there — you won't find another.</em> Here's how to move six people through the valley without fighting for spots twice a day.</p>
+
+    <!-- 2-car plan callout -->
+    <div class="callout">
+      <p class="k">The two-car plan</p>
+      <p>Drive up in <strong>both cars</strong> — six people plus luggage need the space for a 6–7 hour haul. Once you reach Evergreen, <strong>park car #2 and leave it</strong>. Run each park day on <strong>one car + the free shuttle</strong>. You'll pay to enter both vehicles, but only wrestle one into a valley lot.</p>
+    </div>
+
+    <!-- Entrances -->
+    <div class="block">
+      <h3>Your entrance · Big Oak Flat (Hwy 120)</h3>
+      <p>From Evergreen you'll enter at <strong>Big Oak Flat</strong>, where gate delays run ~30 min on busy days — far better than the South entrance's 1–2 hours. It's about <strong>45 min from the lodge to the valley floor</strong>. The Aug 2 south-corridor day is the exception: you'll drive through the valley and down Wawona Rd, making it your longest driving day. Whatever the day, roll out of Evergreen early — <strong>be at the gate before 8 AM</strong> — to skip the queue and actually find parking.</p>
+      <p class="note"><b>Live parking &amp; traffic:</b> text <b>"ynptraffic"</b> to <b>333111</b> before leaving Evergreen each morning.</p>
+    </div>
+
+    <!-- Shuttle -->
+    <div class="block">
+      <h3>The free shuttles</h3>
+      <p>Two loops, both free, both running 7 AM–10 PM. The <strong>Valleywide</strong> shuttle hits every major stop every 12–22 min (a full loop is ~1.5 hrs). The <strong>East Valley</strong> shuttle is more frequent (every 8–12 min) and is the <em>only</em> way to reach Happy Isles / the Mist Trail and Mirror Lake.</p>
+    </div>
+
+    <!-- Access table -->
+    <div class="block">
+      <h3>Site-by-site: drive or ride?</h3>
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr><th>Site</th><th>How to get there</th><th>Where to park</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Tunnel View</strong></td><td><span class="mode d">DRIVE</span> — on Hwy 41, outside the loop</td><td>Small lots either side of the road</td></tr>
+            <tr><td><strong>Yosemite Falls</strong></td><td><span class="mode s">SHUTTLE</span> — Valleywide, Lower Fall stop</td><td>Yosemite Village lot</td></tr>
+            <tr><td><strong>Glacier Point</strong></td><td><span class="mode d">DRIVE</span> — ~1 hr up Glacier Point Rd</td><td>Lot at the point (or tour bus)</td></tr>
+            <tr><td><strong>Mariposa Grove</strong></td><td><span class="mode s">SHUTTLE</span> — mandatory from Welcome Plaza</td><td>Welcome Plaza (near south gate)</td></tr>
+            <tr><td><strong>Mist Trail / Half Dome</strong></td><td><span class="mode s">SHUTTLE</span> — East Valley to Happy Isles</td><td>Curry Village lot</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Parking lots -->
+    <div class="block">
+      <h3>Where to park</h3>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Lot</th><th>Use it for</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Yosemite Village</strong></td><td>Your default. The main day-use lot — both shuttle routes start here.</td></tr>
+            <tr><td><strong>Curry Village</strong></td><td>Mist Trail, Happy Isles &amp; Mirror Lake days (East Valley shuttle).</td></tr>
+            <tr><td><strong>Evergreen Lodge</strong></td><td>Leave car #2 here for all three nights.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Passes -->
+    <div class="block">
+      <h3>Passes</h3>
+      <p>Two vehicles means <strong>$35 × 2 = $70</strong> in 7-day entrance passes (US residents pay no per-person surcharge). If anyone plans to visit another national park this year — Sequoia, Joshua Tree, Death Valley are all close — buy one <strong>America the Beautiful pass ($80)</strong> for one car instead; it covers that vehicle at every federal site for a year and is available as a digital pass in 2026.</p>
+      <p class="note"><b>Reminder:</b> no entrance reservation is required in 2026 — but that's driving record crowds. Weekdays and early arrivals are your friend.</p>
+    </div>
+  </section>
+
+  <footer>
+    YOSEMITE FIELD PLAN · Evergreen Lodge · Aug 1–4 · 6 travelers / 2 vehicles / from Irvine<br>
+    August has everything open but runs hot and crowded — confirm current conditions, waterfall flow and shuttle schedules at nps.gov/yose before you leave.
+  </footer>
+
+</div>
