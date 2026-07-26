@@ -3,7 +3,11 @@
 Personal site for [tomergee.com](https://tomergee.com). One static file, no build step.
 
 - `index.html` — the landing page (name, tagline, link list). Edit it directly.
-- `yosemite/index.html` — Yosemite field plan, served at `/yosemite/`.
+- `trip-*/index.html` — unlisted trip doc. Not linked from anywhere, served at an
+  unguessable path, `noindex`ed and disallowed in `robots.txt`. Unlisted is not
+  private: anyone with the URL can read it, and if this repo is public the file
+  and its history are readable on GitHub regardless of the path.
+- `robots.txt` — keeps crawlers off the unlisted pages.
 - `CNAME` — custom domain for GitHub Pages.
 
 ## Local preview
