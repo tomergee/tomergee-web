@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Japan 2026 — 10-day family trip document. Unlisted: noindex, not linked from the landing page. -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Japan 2026 — A 10-Day Family Itinerary</title>
+<meta name="description" content="A 10-day autumn family itinerary for Japan: Tokyo, Kamakura, Kyoto, Nara and Ghibli Park — planned around late-November daylight.">
+<meta property="og:title" content="Japan 2026 — A 10-Day Family Itinerary">
+<meta property="og:type" content="article">
+<style>
+  :root{
+    --ink:#2b2320; --paper:#fbf6ef; --card:#ffffff;
+    --maple:#c0392b; --maple-soft:#e57a52; --gold:#d8a24a;
+    --pine:#3f6b52; --sky:#356b8c; --line:#e7ddd0; --muted:#7a6f63;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);background:var(--paper);line-height:1.6;}
+  .wrap{max-width:920px;margin:0 auto;padding:0 22px 80px;}
+  header.hero{background:linear-gradient(135deg,#8e2b20 0%,#c0392b 45%,#d8a24a 100%);color:#fff;
+    padding:54px 22px 60px;text-align:center;position:relative;overflow:hidden;}
+  header.hero:before{content:"🍁";position:absolute;font-size:200px;opacity:.08;top:-30px;right:-10px;transform:rotate(15deg);}
+  .hero h1{margin:0;font-size:2.5rem;letter-spacing:.5px;}
+  .hero .sub{font-size:1.12rem;opacity:.95;margin-top:8px;}
+  .hero .meta{margin-top:18px;font-size:.95rem;opacity:.92;display:inline-flex;gap:8px 22px;flex-wrap:wrap;justify-content:center;}
+  .hero .meta span{white-space:nowrap;}
+  h2.section{font-size:1.4rem;margin:44px 0 14px;padding-bottom:8px;border-bottom:3px solid var(--maple);display:flex;align-items:center;gap:10px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:14px 0;
+    box-shadow:0 2px 10px rgba(120,80,40,.05);}
+  .visa{border-left:6px solid var(--pine);}
+  .visa h3{margin:0 0 8px;color:var(--pine);}
+  .flag{display:inline-block;background:var(--pine);color:#fff;font-size:.72rem;padding:2px 9px;border-radius:20px;margin-right:6px;vertical-align:middle;}
+  .warn{background:#fff5e9;border-left:6px solid var(--gold);}
+  .warn h3{margin:0 0 6px;color:#b07d1e;}
+  .dusk{background:#eef3f7;border-left:6px solid var(--sky);}
+  .dusk h3{margin:0 0 6px;color:var(--sky);}
+  .day .dhead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px;}
+  .day .dnum{background:var(--maple);color:#fff;font-weight:700;font-size:.85rem;border-radius:8px;padding:3px 11px;white-space:nowrap;}
+  .day .ddate{font-weight:700;font-size:1.08rem;}
+  .day .dtag{font-size:.72rem;text-transform:uppercase;letter-spacing:.6px;padding:2px 10px;border-radius:20px;color:#fff;}
+  .tag-city{background:var(--sky);}
+  .tag-exc{background:var(--maple-soft);}
+  .tag-travel{background:var(--muted);}
+  .day ul{margin:8px 0 0;padding-left:20px;}
+  .day li{margin:4px 0;}
+  .day .base{font-size:.85rem;color:var(--muted);margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);}
+  .kid{color:var(--maple);font-weight:600;}
+  .sched{list-style:none;margin:10px 0 0;padding:0;}
+  .sched li{display:flex;gap:12px;margin:9px 0;align-items:baseline;}
+  .sched .t{flex:0 0 58px;font-weight:700;color:var(--maple);font-size:.82rem;font-variant-numeric:tabular-nums;letter-spacing:.3px;}
+  .sched .ev{flex:1;}
+  .sched .sun{color:var(--sky);font-weight:700;}
+  .theme{font-size:.88rem;color:var(--muted);font-style:italic;margin:2px 0 0;}
+  .exc-banner{background:linear-gradient(90deg,#e57a52,#d8a24a);color:#fff;border-radius:12px;padding:12px 18px;margin:26px 0 6px;font-weight:700;font-size:1.05rem;}
+  table{width:100%;border-collapse:collapse;margin-top:8px;font-size:.94rem;}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+  th{color:var(--muted);font-size:.8rem;text-transform:uppercase;letter-spacing:.5px;}
+  .check li{margin:7px 0;}
+  .pill{display:inline-block;font-size:.7rem;background:var(--maple);color:#fff;padding:1px 8px;border-radius:20px;margin-left:6px;}
+  .pill-b{background:var(--sky);}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .maps svg{width:100%;height:auto;display:block;}
+  .maptitle{font-weight:700;font-size:1rem;margin:0 0 4px;}
+  .mapnote{font-size:.85rem;color:var(--muted);margin:10px 0 0;}
+  .maplegend{display:flex;gap:6px 18px;flex-wrap:wrap;margin-top:12px;font-size:.85rem;color:var(--muted);}
+  .maplegend b{color:var(--ink);}
+  .pins{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:16px;}
+  .pinbox h4{margin:0 0 6px;font-size:.95rem;color:var(--maple);}
+  .pinbox ul{list-style:none;margin:0;padding:0;}
+  .pinbox li{margin:4px 0;font-size:.9rem;}
+  .pinbox a{text-decoration:none;}
+  .pinbox a:hover{text-decoration:underline;}
+  .mp{font-size:.82rem;white-space:nowrap;}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr;}.hero h1{font-size:2rem;}.sched .t{flex:0 0 50px;}}
+  a{color:var(--maple);}
+  .foot{text-align:center;color:var(--muted);font-size:.82rem;margin-top:40px;}
+</style>
+</head>
+<body>
+<header class="hero">
+  <h1>Japan · Autumn 2026</h1>
+  <div class="sub">Tokyo · Kamakura · Kyoto &amp; Nara · Ghibli Park</div>
+  <div class="meta">
+    <span>✈️ Nov 17 – Nov 27, 2026</span>
+    <span>👨‍👩‍👧‍👧 Family of 4 · daughters 12 &amp; 10</span>
+    <span>🍁 Peak fall foliage</span>
+    <span>🎫 United Airlines</span>
+  </div>
+</header>
+<div class="wrap">
+
+  <h2 class="section">🛂 Visas &amp; Entry</h2>
+  <div class="card visa">
+    <h3>Good news — no visa needed</h3>
+    <p><span class="flag">USA</span><span class="flag">Israel</span> Both U.S. and Israeli passport holders get <strong>visa-free entry to Japan for up to 90 days</strong> for tourism. Your trip is 10 days, so you're well within the limit — for all four travelers on either passport.</p>
+    <p style="margin-bottom:0"><strong>Before you fly:</strong> passports valid 6+ months past your return · complete <strong>Visit Japan Web</strong> a few days out for the immigration/customs QR codes · Japan's <strong>JESTA</strong> doesn't launch until 2028, so nothing extra to file.</p>
+  </div>
+
+  <div class="card warn">
+    <h3>⚠️ Two things to plan around</h3>
+    <p style="margin:0 0 8px"><strong>Mon, Nov 23 is a Japanese public holiday</strong> (Labor Thanksgiving) — making <strong>Sat 21 – Mon 23 a 3-day weekend</strong>. Kamakura on the 21st and Kyoto on the 23rd will be crowded: start early both days.</p>
+    <p style="margin:0"><strong>Both Ghibli sites need advance timed tickets.</strong> Ghibli Park releases <strong>Sept 10 (14:00 JST)</strong>; Ghibli Museum releases <strong>Oct 10 (10:00 JST)</strong> via Lawson. Book a <strong>10:00 entry slot</strong> for the Museum — the plan below is built around it.</p>
+  </div>
+
+  <div class="card dusk">
+    <h3>🌇 The single most important planning fact: it gets dark at 4:30 PM</h3>
+    <p style="margin:0 0 8px">In late November Tokyo runs <strong>sunrise ~6:25, sunset ~16:30</strong>. That's only ten hours of daylight, and it shapes every day:</p>
+    <p style="margin:0 0 8px"><strong>Before 16:30</strong> — shrines, parks, gardens, temples, viewpoints, anything outdoors. <strong>Meiji Jingū actually closes at 16:10</strong> in November (it opens and shuts with the sun), and Kamakura's temples close around 16:30 too.</p>
+    <p style="margin:0"><strong>After 16:30</strong> — shopping, arcades, restaurants, and Tokyo's neon, which is when the city is at its best. Every day below front-loads the outdoor things and saves the lit-up things for the evening. Jet lag helps here: coming from LA you'll wake naturally around 5 AM for the first few days, so early starts are free.</p>
+  </div>
+
+  <h2 class="section">🗺️ The Shape of the Trip</h2>
+  <div class="card">
+    <table>
+      <tr><th>Nights</th><th>Base</th><th>Why</th></tr>
+      <tr><td>Nov 18–22 (4)</td><td><strong>Tokyo · Ginza</strong></td><td>City highlights, Ghibli Museum + Kamakura day trip</td></tr>
+      <tr><td>Nov 22–25 (3)</td><td><strong>Kyoto</strong></td><td>Temples, Arashiyama + Nara day trip <span class="pill">Excursion 1</span></td></tr>
+      <tr><td>Nov 25 (1)</td><td><strong>Nagoya</strong></td><td>Full day at Ghibli Park <span class="pill">Excursion 2</span></td></tr>
+      <tr><td>Nov 26 (1)</td><td><strong>Tokyo · Ginza</strong></td><td>Last day, then Haneda</td></tr>
+    </table>
+    <p style="margin-bottom:0;font-size:.9rem;color:var(--muted)">🚉 <strong>Your Tokyo hub is Shimbashi</strong> — 6 minutes' walk. Direct trains to Narita, to Haneda, to Kamakura, and two Yamanote stops to Tokyo Station for the Shinkansen.</p>
+  </div>
+
+  <h2 class="section">🧭 Maps</h2>
+
+  <div class="card maps">
+    <p class="maptitle">Route overview — the Tōkaidō corridor</p>
+    <svg viewBox="0 0 820 360" role="img" aria-label="Schematic route map showing Tokyo, Nagoya and Kyoto along the Tokaido Shinkansen with day-trip branches">
+      <line x1="120" y1="195" x2="640" y2="195" stroke="#e0d2bd" stroke-width="9" stroke-linecap="round"/>
+      <line x1="520" y1="128" x2="145" y2="128" stroke="#356b8c" stroke-width="2" stroke-linecap="round"/>
+      <polygon points="132,128 146,122 146,134" fill="#356b8c"/>
+      <text x="332" y="115" text-anchor="middle" font-size="11.5" fill="#356b8c" font-weight="700">① Nov 22 · Tokyo → Kyoto · 2h15</text>
+      <line x1="142" y1="243" x2="352" y2="243" stroke="#356b8c" stroke-width="2" stroke-linecap="round"/>
+      <polygon points="365,243 351,237 351,249" fill="#356b8c"/>
+      <text x="250" y="232" text-anchor="middle" font-size="11.5" fill="#356b8c" font-weight="700">② Nov 25 · 35 min</text>
+      <line x1="402" y1="243" x2="604" y2="243" stroke="#356b8c" stroke-width="2" stroke-linecap="round"/>
+      <polygon points="617,243 603,237 603,249" fill="#356b8c"/>
+      <text x="506" y="232" text-anchor="middle" font-size="11.5" fill="#356b8c" font-weight="700">③ Nov 26 · 1h40</text>
+      <circle cx="520" cy="195" r="5" fill="#d8a24a"/>
+      <text x="520" y="182" text-anchor="middle" font-size="10" fill="#b07d1e">🗻 Mt. Fuji</text>
+      <line x1="120" y1="209" x2="120" y2="292" stroke="#3f6b52" stroke-width="2.5" stroke-dasharray="5 4"/>
+      <line x1="380" y1="209" x2="380" y2="292" stroke="#d8a24a" stroke-width="2.5" stroke-dasharray="5 4"/>
+      <line x1="640" y1="209" x2="598" y2="292" stroke="#3f6b52" stroke-width="2.5" stroke-dasharray="5 4"/>
+      <line x1="640" y1="209" x2="700" y2="292" stroke="#d8a24a" stroke-width="2.5" stroke-dasharray="5 4"/>
+      <circle cx="120" cy="292" r="8" fill="#3f6b52"/>
+      <circle cx="380" cy="292" r="8" fill="#d8a24a"/>
+      <circle cx="598" cy="292" r="8" fill="#3f6b52"/>
+      <circle cx="700" cy="292" r="8" fill="#d8a24a"/>
+      <text x="120" y="318" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2b2320">Nara</text>
+      <text x="120" y="332" text-anchor="middle" font-size="9.5" fill="#7a6f63">day trip · Nov 24</text>
+      <text x="380" y="318" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2b2320">Ghibli Park</text>
+      <text x="380" y="332" text-anchor="middle" font-size="9.5" fill="#7a6f63">Nov 25</text>
+      <text x="598" y="318" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2b2320">Kamakura</text>
+      <text x="598" y="332" text-anchor="middle" font-size="9.5" fill="#7a6f63">day trip · Nov 21</text>
+      <text x="700" y="318" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2b2320">Ghibli Museum</text>
+      <text x="700" y="332" text-anchor="middle" font-size="9.5" fill="#7a6f63">Kichijōji · Nov 20</text>
+      <circle cx="120" cy="195" r="14" fill="#fff" stroke="#c0392b" stroke-width="4"/>
+      <circle cx="380" cy="195" r="14" fill="#fff" stroke="#c0392b" stroke-width="4"/>
+      <circle cx="640" cy="195" r="14" fill="#fff" stroke="#c0392b" stroke-width="4"/>
+      <text x="120" y="156" text-anchor="middle" font-size="17" font-weight="700" fill="#2b2320">Kyoto</text>
+      <text x="120" y="172" text-anchor="middle" font-size="11" fill="#7a6f63">3 nights · Nov 22–25</text>
+      <text x="380" y="156" text-anchor="middle" font-size="17" font-weight="700" fill="#2b2320">Nagoya</text>
+      <text x="380" y="172" text-anchor="middle" font-size="11" fill="#7a6f63">1 night · Nov 25</text>
+      <text x="640" y="156" text-anchor="middle" font-size="17" font-weight="700" fill="#2b2320">Tokyo</text>
+      <text x="640" y="172" text-anchor="middle" font-size="11" fill="#7a6f63">Nov 18–22 · Nov 26</text>
+      <text x="672" y="206" font-size="10" fill="#7a6f63">✈ Arrive NRT · Nov 18</text>
+      <text x="672" y="222" font-size="10" fill="#7a6f63">✈ Depart HND · Nov 27</text>
+    </svg>
+    <p class="mapnote">🗻 <strong>Fuji tip:</strong> heading <em>west</em> to Kyoto sit on the <strong>right (D/E)</strong>; heading <em>east</em> back sit on the <strong>left (D/E)</strong> — best views ~40 min from Tokyo near Shin-Fuji.</p>
+  </div>
+
+  <div class="card maps">
+    <p class="maptitle">Tokyo orientation — you're based in Ginza, by Shimbashi</p>
+    <svg viewBox="0 0 720 405" role="img" aria-label="Schematic map of central Tokyo showing the JR Yamanote loop, the Ginza hotel near Shimbashi, and connections to Kichijoji, Asakusa, Kamakura and Haneda">
+      <ellipse cx="390" cy="185" rx="165" ry="120" fill="none" stroke="#7fb069" stroke-width="7"/>
+      <text x="390" y="181" text-anchor="middle" font-size="12.5" font-weight="700" fill="#5c8f4e">JR Yamanote Line</text>
+      <text x="390" y="197" text-anchor="middle" font-size="9.5" fill="#7fa571">loops central Tokyo</text>
+      <line x1="253" y1="252" x2="96" y2="122" stroke="#d8a24a" stroke-width="2.5" stroke-dasharray="5 4"/>
+      <line x1="472" y1="81" x2="556" y2="72" stroke="#3f6b52" stroke-width="2.5" stroke-dasharray="5 4"/>
+      <line x1="507" y1="270" x2="596" y2="262" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="5 4"/>
+      <line x1="419" y1="303" x2="300" y2="362" stroke="#3f6b52" stroke-width="2.5" stroke-dasharray="5 4"/>
+      <line x1="419" y1="303" x2="500" y2="362" stroke="#356b8c" stroke-width="2.5" stroke-dasharray="5 4"/>
+      <circle cx="313" cy="79" r="6" fill="#fff" stroke="#4a7c59" stroke-width="3"/>
+      <circle cx="472" cy="81" r="6" fill="#fff" stroke="#4a7c59" stroke-width="3"/>
+      <circle cx="555" cy="185" r="6" fill="#fff" stroke="#4a7c59" stroke-width="3"/>
+      <circle cx="533" cy="245" r="6" fill="#fff" stroke="#4a7c59" stroke-width="3"/>
+      <circle cx="507" cy="270" r="7.5" fill="#c0392b" stroke="#fff" stroke-width="2.5"/>
+      <circle cx="419" cy="303" r="6" fill="#fff" stroke="#4a7c59" stroke-width="3"/>
+      <circle cx="253" cy="252" r="6" fill="#fff" stroke="#4a7c59" stroke-width="3"/>
+      <circle cx="233" cy="222" r="6" fill="#fff" stroke="#4a7c59" stroke-width="3"/>
+      <circle cx="229" cy="160" r="6" fill="#fff" stroke="#4a7c59" stroke-width="3"/>
+      <text x="313" y="64" text-anchor="middle" font-size="11" fill="#2b2320">Ikebukuro</text>
+      <text x="466" y="66" text-anchor="end" font-size="11" fill="#2b2320">Ueno</text>
+      <text x="568" y="189" font-size="11" fill="#2b2320">Tokyo Station</text>
+      <text x="544" y="240" font-size="11" fill="#2b2320">Yūrakuchō</text>
+      <text x="515" y="290" font-size="11" font-weight="700" fill="#c0392b">Shimbashi ★</text>
+      <text x="406" y="292" text-anchor="end" font-size="11" fill="#2b2320">Shinagawa</text>
+      <text x="240" y="264" text-anchor="end" font-size="11" fill="#2b2320">Shibuya</text>
+      <text x="220" y="226" text-anchor="end" font-size="11" fill="#2b2320">Harajuku</text>
+      <text x="218" y="156" text-anchor="end" font-size="11" fill="#2b2320">Shinjuku</text>
+      <circle cx="96" cy="122" r="7" fill="#d8a24a"/>
+      <text x="96" y="104" text-anchor="middle" font-size="10.5" font-weight="700" fill="#2b2320">🎬 Ghibli Museum</text>
+      <text x="96" y="144" text-anchor="middle" font-size="9.5" fill="#7a6f63">Kichijōji · Inokashira</text>
+      <circle cx="556" cy="72" r="7" fill="#3f6b52"/>
+      <text x="568" y="68" font-size="10.5" fill="#2b2320">Asakusa · Sensō-ji</text>
+      <circle cx="596" cy="262" r="9" fill="#c0392b"/>
+      <text x="609" y="259" font-size="10.5" font-weight="700" fill="#c0392b">🏨 the b ginza</text>
+      <text x="609" y="272" font-size="9" fill="#7a6f63">+ Fresa Inn (Nov 26)</text>
+      <circle cx="300" cy="362" r="7" fill="#3f6b52"/>
+      <text x="300" y="382" text-anchor="middle" font-size="10.5" fill="#2b2320">Kamakura</text>
+      <text x="300" y="395" text-anchor="middle" font-size="9" fill="#7a6f63">Yokosuka line ~55 min</text>
+      <circle cx="500" cy="362" r="7" fill="#356b8c"/>
+      <text x="500" y="382" text-anchor="middle" font-size="10.5" fill="#2b2320">✈ Haneda</text>
+      <text x="500" y="395" text-anchor="middle" font-size="9" fill="#7a6f63">direct ~30 min</text>
+      <line x1="507" y1="270" x2="624" y2="328" stroke="#d8a24a" stroke-width="2.5" stroke-dasharray="5 4"/>
+      <circle cx="624" cy="328" r="7" fill="#d8a24a"/>
+      <text x="624" y="348" text-anchor="middle" font-size="10.5" font-weight="700" fill="#2b2320">Odaiba · Toyosu</text>
+      <text x="624" y="361" text-anchor="middle" font-size="9" fill="#7a6f63">Yurikamome · Nov 26</text>
+    </svg>
+    <p class="mapnote">★ <strong>Shimbashi is your hub</strong> (6 min walk): direct from <strong>Narita</strong>, direct to <strong>Haneda</strong>, the <strong>Yokosuka line straight to Kamakura</strong>, and <strong>two Yamanote stops to Tokyo Station</strong>. The <strong>Yurikamome</strong> also starts here — that's your ride to Odaiba and Toyosu.</p>
+  </div>
+
+  <div class="card">
+    <p class="maptitle">📍 Tap to navigate</p>
+    <div class="pins">
+      <div class="pinbox">
+        <h4>🏨 Your hotels</h4>
+        <ul>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=the+b+ginza+hotel+Tokyo">the b ginza</a> <span class="mp">Nov 18–22</span></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Hotel+New+Hankyu+Kyoto">Hotel New Hankyu Kyoto</a> <span class="mp">Nov 22–25</span></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Montblanc+Hotel+Raffine+Nagoya+Ekimae">Mont Blanc Hotel Raffine Nagoya</a> <span class="mp">Nov 25–26</span></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Sotetsu+Fresa+Inn+Ginza+Sanchome">Fresa Inn Ginza-Sanchōme</a> <span class="mp">Nov 26–27</span></li>
+        </ul>
+      </div>
+      <div class="pinbox">
+        <h4>Walk from the hotel</h4>
+        <ul>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Shimbashi+Station+Tokyo">Shimbashi Station</a> <span class="mp">6 min</span></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Tsukiji+Outer+Market">Tsukiji Outer Market</a> <span class="mp">10 min</span></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Ginza+Six">Ginza Six</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Itoya+Ginza">Itoya (stationery)</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Caretta+Shiodome">Caretta Shiodome</a> <span class="mp">illumination</span></li>
+        </ul>
+      </div>
+      <div class="pinbox">
+        <h4>Nov 19 · East Tokyo</h4>
+        <ul>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Senso-ji+Temple+Asakusa">Sensō-ji</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Nakamise+Shopping+Street">Nakamise-dōri</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Kakimori+Kuramae+Tokyo">Kakimori, Kuramae</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Tokyo+Skytree">Tokyo Skytree</a></li>
+        </ul>
+      </div>
+      <div class="pinbox">
+        <h4>Nov 20 · Ghibli &amp; West</h4>
+        <ul>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Ghibli+Museum+Mitaka">Ghibli Museum</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Inokashira+Park+Kichijoji">Inokashira Park</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Harmonica+Yokocho+Kichijoji">Harmonica Yokochō</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Meiji+Jingu+Shrine">Meiji Jingū</a> <span class="mp">closes 16:10</span></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Takeshita+Street+Harajuku">Takeshita Street</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Shibuya+Sky">Shibuya Sky</a></li>
+        </ul>
+      </div>
+      <div class="pinbox">
+        <h4>Nov 21 · Kamakura</h4>
+        <ul>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Kotoku-in+Great+Buddha+Kamakura">Great Buddha (Kōtoku-in)</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Hasedera+Temple+Kamakura">Hase-dera</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Enoshima">Enoshima</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Shichirigahama+Beach">Shichirigahama</a> <span class="mp">Fuji sunset</span></li>
+        </ul>
+      </div>
+      <div class="pinbox">
+        <h4>Nov 26 · Odaiba &amp; Toyosu</h4>
+        <ul>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Aqua+City+Odaiba">AniTouch · Aqua City</a> <span class="mp">🦫 capybaras</span></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Round1+Stadium+DiverCity+Tokyo+Plaza">Round1 Stadium · DiverCity</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=teamLab+Planets+TOKYO+Toyosu">teamLab Planets</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Caretta+Shiodome">Caretta Shiodome</a> <span class="mp">illumination</span></li>
+        </ul>
+      </div>
+      <div class="pinbox">
+        <h4>Kyoto, Nara &amp; Nagoya</h4>
+        <ul>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Kiyomizu-dera+Kyoto">Kiyomizu-dera</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Fushimi+Inari+Taisha">Fushimi Inari</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Arashiyama+Bamboo+Grove">Arashiyama</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Nara+Park">Nara Park</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Ghibli+Park+Aichi">Ghibli Park</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Haneda+Airport+Terminal+3">✈ Haneda T3</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="mapnote">💡 Download <strong>offline maps</strong> for Tokyo, Kyoto and Nagoya in Google Maps before you fly.</p>
+  </div>
+
+  <h2 class="section">🏨 Where You're Staying</h2>
+  <div class="card">
+    <table>
+      <tr><th>Dates</th><th>City</th><th>Hotel</th><th>Status</th></tr>
+      <tr><td>Nov 18–22</td><td>Tokyo · Ginza</td><td><strong>the b ginza</strong> — Quadruple Room, ~37 m², four twin beds. 6 min to Shimbashi · free cancel until Nov 16</td><td>✅ Booked</td></tr>
+      <tr><td>Nov 22–25</td><td>Kyoto</td><td><strong>Hotel New Hankyu Kyoto</strong> — Quadruple Room, across from Kyoto Station</td><td>✅ Booked</td></tr>
+      <tr><td>Nov 25</td><td>Nagoya</td><td><strong>Mont Blanc Hotel Raffine Nagoya Ekimae</strong> — Quad room, 26 m², sleeps 4. <strong>3-min walk</strong> from Nagoya Station (Sakura-dōri exit). prepaid · free cancel until Nov 24</td><td>✅ Booked</td></tr>
+      <tr><td>Nov 26</td><td>Tokyo · Ginza</td><td><strong>Sotetsu Fresa Inn Ginza-Sanchōme</strong> — 2 rooms</td><td>✅ Booked</td></tr>
+    </table>
+  </div>
+
+  <h2 class="section">📅 Tokyo, Hour by Hour</h2>
+
+  <div class="card day">
+    <div class="dhead"><span class="dnum">Day 1</span><span class="ddate">Wed, Nov 18 — Landing</span><span class="dtag tag-city">Ginza</span></div>
+    <p class="theme">Don't plan anything. You'll have been travelling 15 hours and it's dark by the time you're out of the airport.</p>
+    <ul class="sched">
+      <li><span class="t">15:55</span><span class="ev">Land at <strong>Narita</strong>. Immigration and baggage take ~45 min — your Visit Japan Web QR codes speed this up.</span></li>
+      <li><span class="t">16:45</span><span class="ev">Buy <strong>Suica / Welcome Suica</strong> cards for all four, then head in: <strong>Keisei Access Express direct to Shimbashi</strong> (no transfer), or the roomier <strong>Narita Express to Tokyo Station</strong> + two Yamanote stops.</span></li>
+      <li><span class="t">18:30</span><span class="ev">Check in at <strong>the b ginza</strong>. Six-minute walk from Shimbashi.</span></li>
+      <li><span class="t">19:15</span><span class="ev">Dinner in the <strong>Shimbashi izakaya alleys</strong> under the railway arches — cheap, loud, delicious, and thirty seconds from the hotel. <span class="kid">Kids' win:</span> or conveyor-belt sushi if they want something familiar.</span></li>
+      <li><span class="t">20:30</span><span class="ev">Ten-minute walk up <strong>Chūō-dōri</strong> to see Ginza lit up, then a convenience-store run for water and breakfast bits. <strong>Sleep early</strong> — you'll be wide awake at 5 AM.</span></li>
+    </ul>
+    <div class="base">🛏️ the b ginza · 🌅 sunset was at 16:34, long before you landed</div>
+  </div>
+
+  <div class="card day">
+    <div class="dhead"><span class="dnum">Day 2</span><span class="ddate">Thu, Nov 19 — Old Tokyo</span><span class="dtag tag-city">Tsukiji · Asakusa · Skytree</span></div>
+    <p class="theme">Everything today sits on one subway line, and jet lag gives you the best hours for free. Sensō-ji before the crowds, Skytree at sunset.</p>
+    <ul class="sched">
+      <li><span class="t">06:45</span><span class="ev">Awake early anyway — walk 10 minutes to <strong>Tsukiji Outer Market</strong> for breakfast. Grilled scallops, tamagoyaki on a stick, fresh sushi, strawberry daifuku. Busiest and best 7–10 AM. <span class="kid">Let the girls pick from the stalls.</span></span></li>
+      <li><span class="t">08:30</span><span class="ev"><strong>Toei Asakusa line, Higashi-Ginza → Asakusa</strong> — direct, ~15 min.</span></li>
+      <li><span class="t">09:00</span><span class="ev"><strong>Sensō-ji</strong> while it's still quiet. The Kaminarimon lantern without a hundred people in your photo is worth the early start. Wander the grounds, draw an <em>omikuji</em> fortune.</span></li>
+      <li><span class="t">10:00</span><span class="ev"><strong>Nakamise-dōri</strong> as the shops open — melon pan, ningyō-yaki, senbei, cheap yukata and folding fans.</span></li>
+      <li><span class="t">11:15</span><span class="ev">Riverside walk (or one stop) to <strong>Kuramae</strong> — Tokyo's craft district.</span></li>
+      <li><span class="t">12:00</span><span class="ev"><strong>Kakimori</strong> — design and bind your own notebook, choosing cover, paper and rings. <span class="kid">The best souvenir of the trip.</span> <em>Check the day's opening hours — it opens late morning.</em> Lunch in one of Kuramae's cafés after.</span></li>
+      <li><span class="t">14:30</span><span class="ev">Over to <strong>Tokyo Skytree</strong> (one stop from Asakusa). Book a timed slot if you can.</span></li>
+      <li><span class="t">15:45</span><span class="ev"><span class="sun">☀ Go up for sunset at 16:34.</span> You get the city in daylight, the sun going down over the Kantō plain, and then all of Tokyo switching its lights on. Best hour of the day up there.</span></li>
+      <li><span class="t">17:30</span><span class="ev">Back to Ginza. <strong>Dinner + first proper Ginza wander</strong> — Itoya, Uniqlo and Muji flagships and the department stores run to ~20:00. The <strong>depachika</strong> food halls under Mitsukoshi and Matsuya discount their beautiful bentō after 19:00.</span></li>
+    </ul>
+    <div class="base">🛏️ the b ginza · Tsukiji is closed Sundays — Thursday is perfect</div>
+  </div>
+
+  <div class="card day">
+    <div class="dhead"><span class="dnum">Day 3</span><span class="ddate">Fri, Nov 20 — Ghibli &amp; the West Side</span><span class="dtag tag-city">Kichijōji · Harajuku · Shibuya</span></div>
+    <p class="theme">Built around a 10:00 Museum slot. Meiji Jingū must happen before it closes at 16:10 — after that, everything is neon.</p>
+    <ul class="sched">
+      <li><span class="t">08:40</span><span class="ev">Ginza line to <strong>Shibuya</strong>, change to the <strong>Keiō Inokashira line to Kichijōji</strong> (~17 min).</span></li>
+      <li><span class="t">09:40</span><span class="ev">Walk 15 minutes through <strong>Inokashira Park</strong> to the museum — the pond and maples are at peak colour in late November. A far nicer approach than the Mitaka side.</span></li>
+      <li><span class="t">10:00</span><span class="ev">🎬 <strong>Ghibli Museum</strong>. Don't miss the <strong>exclusive short film</strong> (shown only here), the rooftop robot soldier, and the Catbus room. Allow <strong>2–2.5 hours</strong>. No photos inside — put the phones away and just look.</span></li>
+      <li><span class="t">12:30</span><span class="ev">Lunch in <strong>Kichijōji</strong> — try the <strong>Harmonica Yokochō</strong> alleys. It's a lovely neighbourhood: boutiques, its own Loft, and a famous <em>menchi-katsu</em> croquette stand worth queueing for.</span></li>
+      <li><span class="t">14:15</span><span class="ev">Inokashira line back to Shibuya, one Yamanote stop to <strong>Harajuku</strong>.</span></li>
+      <li><span class="t">14:45</span><span class="ev"><span class="sun">☀ <strong>Meiji Jingū</strong> — must be before 16:10.</strong></span> A wide forest path through 100,000 donated trees, opening onto the great torii gate. A genuinely peaceful hour in the middle of the city.</span></li>
+      <li><span class="t">16:00</span><span class="ev"><strong>Takeshita Street</strong> as the lights come on — crêpes, purikura photo booths, kawaii shops. Then <strong>Kiddyland</strong>, the <strong>Pokémon Center</strong> and <strong>Nintendo Tokyo</strong>. <span class="kid">Peak daughter territory.</span></span></li>
+      <li><span class="t">17:30</span><span class="ev">Walk <strong>Cat Street</strong> down to Shibuya (~15 min) — boutique-lined and lit, with <strong>Omotesandō</strong>'s designer avenue one street over if the shopping mood strikes.</span></li>
+      <li><span class="t">18:15</span><span class="ev">The <strong>Shibuya Scramble Crossing</strong> and <strong>Hachikō</strong>. Cross it twice — it's better at night.</span></li>
+      <li><span class="t">18:45</span><span class="ev"><strong>Shibuya Sky</strong> — the open-air rooftop. Night slots are easier to book than sunset and the view of the city lit up is the one you'll remember. Then dinner in Shibuya and the Ginza line home.</span></li>
+    </ul>
+    <div class="base">🛏️ the b ginza · <strong>Drop Meiji Jingū</strong> if the museum runs long — everything else works after dark</div>
+  </div>
+
+  <div class="card day">
+    <div class="dhead"><span class="dnum">Day 4</span><span class="ddate">Sat, Nov 21 — Kamakura &amp; the Sea</span><span class="dtag tag-exc">Day trip</span></div>
+    <p class="theme">Holiday-weekend Saturday, so go early. Ends with the Mt. Fuji view you gave up when we dropped Hakone.</p>
+    <ul class="sched">
+      <li><span class="t">07:20</span><span class="ev">Walk to Shimbashi, <strong>JR Yokosuka line direct to Kamakura</strong> — no transfers, ~55 min. Grab breakfast at the station.</span></li>
+      <li><span class="t">08:30</span><span class="ev">Arrive Kamakura. Enoden two stops to <strong>Hase</strong>.</span></li>
+      <li><span class="t">08:50</span><span class="ev"><strong>Great Buddha (Kōtoku-in)</strong> — opens 08:00, so you'll have the 13-metre bronze Amida almost to yourselves. For ¥50 you can <strong>climb inside him</strong>. <span class="kid">Kids love that.</span></span></li>
+      <li><span class="t">09:50</span><span class="ev"><strong>Hase-dera</strong> — hillside gardens, sea views, a cave of tiny carved statues, and maples at full colour. One of the loveliest spots in the region.</span></li>
+      <li><span class="t">11:30</span><span class="ev">The <strong>Enoden</strong> — a little green tram that rattles between houses and then bursts out along the coastline. Ride it to <strong>Enoshima</strong>.</span></li>
+      <li><span class="t">12:00</span><span class="ev">Seaside lunch. The local speciality is <em>shirasu</em> (whitebait) over rice. Then explore <strong>Enoshima</strong> island — shrine, sea caves, and the Sea Candle tower.</span></li>
+      <li><span class="t">15:30</span><span class="ev">Enoden back a few stops to <strong>Shichirigahama</strong> or <strong>Kamakura-Kōkōmae</strong> — the famous beachside level crossing.</span></li>
+      <li><span class="t">16:34</span><span class="ev"><span class="sun">☀ <strong>Sunset over the bay.</strong></span> On clear winter afternoons <strong>Mt. Fuji stands in silhouette across the water</strong> from this stretch of coast. It's the single best free view of the trip — and it's exactly what Hakone would have given you.</span></li>
+      <li><span class="t">17:15</span><span class="ev">Train back to Tokyo. Dinner in Ginza — Saturday evening is when it's liveliest.</span></li>
+    </ul>
+    <div class="base">🛏️ the b ginza · Temples close ~16:30 — do them in the morning</div>
+  </div>
+
+  <div class="card day">
+    <div class="dhead"><span class="dnum">Day 5</span><span class="ddate">Sun, Nov 22 — Tokyo → Kyoto</span><span class="dtag tag-travel">Travel</span></div>
+    <ul class="sched">
+      <li><span class="t">08:30</span><span class="ev">Hotel breakfast, pack up. <em>(Tsukiji is closed on Sundays.)</em></span></li>
+      <li><span class="t">09:45</span><span class="ev">Six-minute walk to Shimbashi, <strong>two Yamanote stops to Tokyo Station</strong>. Buy <em>ekiben</em> lunch boxes on the platform — half the fun.</span></li>
+      <li><span class="t">10:30</span><span class="ev"><strong>Shinkansen to Kyoto</strong> (~2h15). 🗻 <strong>Right-hand side, seats D/E</strong> — Fuji appears about 40 minutes in.</span></li>
+      <li><span class="t">13:00</span><span class="ev">Kyoto. Check in at Hotel New Hankyu, across from the station.</span></li>
+      <li><span class="t">14:30</span><span class="ev"><strong>Higashiyama</strong>: <strong>Kiyomizu-dera</strong> among the maples, the Sannenzaka lanes, and <strong>Gion</strong> at dusk.</span></li>
+    </ul>
+    <div class="base">🛏️ Kyoto</div>
+  </div>
+
+  <div class="exc-banner">⛩️ Kyoto, Nara &amp; Ghibli Park</div>
+
+  <div class="card day">
+    <div class="dhead"><span class="dnum">Day 6</span><span class="ddate">Mon, Nov 23 — Kyoto Classics</span><span class="dtag tag-exc">Kyoto</span></div>
+    <ul>
+      <li>Early <strong>Fushimi Inari</strong> — the endless red torii tunnels. Public holiday today, so arrive at opening.</li>
+      <li><strong>Arashiyama</strong>: bamboo grove, Tenryū-ji's garden, <strong>Iwatayama Monkey Park</strong>. <span class="kid">Kids love the monkeys.</span></li>
+      <li>Late afternoon: <strong>Kinkaku-ji</strong>, the Golden Pavilion.</li>
+    </ul>
+    <div class="base">🛏️ Kyoto · <em>Public holiday — go early</em></div>
+  </div>
+
+  <div class="card day">
+    <div class="dhead"><span class="dnum">Day 7</span><span class="ddate">Tue, Nov 24 — Nara Day Trip</span><span class="dtag tag-exc">Nara</span></div>
+    <ul>
+      <li>~45 min from Kyoto. <strong>Nara Park</strong> — hundreds of bowing deer you can feed <span class="kid">(a guaranteed favourite)</span>.</li>
+      <li><strong>Tōdai-ji</strong> — a colossal wooden hall housing the Great Buddha of Nara.</li>
+      <li>Back to Kyoto for dinner — a food crawl through <strong>Nishiki Market</strong>.</li>
+    </ul>
+    <div class="base">🛏️ Kyoto <em>(Nara is a day trip — you sleep in Kyoto)</em></div>
+  </div>
+
+  <div class="card day">
+    <div class="dhead"><span class="dnum">Day 8</span><span class="ddate">Wed, Nov 25 — Ghibli Park</span><span class="dtag tag-exc">Nagoya</span></div>
+    <ul>
+      <li><strong>Early start.</strong> ~07:00–08:00 Shinkansen <strong>Kyoto → Nagoya</strong> (~35 min). Leave bags at the <strong>Mont Blanc Hotel Raffine</strong> — 3-min walk from the Sakura-dōri exit — then subway + <strong>Linimo maglev</strong> to the park (~1 hr). <em>Check-in is 16:00, so ask them to hold the luggage; Japanese hotels do this routinely.</em></li>
+      <li><strong>Ghibli Park</strong> — Satsuki &amp; Mei's house, Howl's castle, the Grand Warehouse, Mononoke Village, Kiki's town. <span class="pill">Grand Warehouse timed slot — aim for ~10:00</span></li>
+      <li>Park hours 10:00–17:00. Bring <strong>passports</strong> — checked at entry, and your group enters together.</li>
+    </ul>
+    <div class="base">🛏️ Nagoya</div>
+  </div>
+
+  <div class="card day">
+    <div class="dhead"><span class="dnum">Day 9</span><span class="ddate">Thu, Nov 26 — Odaiba &amp; Toyosu</span><span class="dtag tag-city">Yurikamome</span></div>
+    <p class="theme">One train line straight from your doorstep, four things the girls will love — and the indoor ones saved for after dark.</p>
+    <ul class="sched">
+      <li><span class="t">09:30</span><span class="ev"><strong>Shinkansen Nagoya → Tokyo</strong> (~1h40). 🗻 <strong>Left side, seats D/E</strong> for one last Fuji.</span></li>
+      <li><span class="t">11:20</span><span class="ev">Drop bags at the <strong>Fresa Inn Ginza-Sanchōme</strong>. Quick lunch — or duck into <strong>Tokyo Station's Character Street</strong> for last souvenirs: Pokémon, Ghibli and Jump shops in one underground corridor.</span></li>
+      <li><span class="t">12:40</span><span class="ev"><strong>Yurikamome from Shimbashi</strong> — driverless, so claim the front seats. It spirals up and runs out over <strong>Rainbow Bridge</strong> with the whole bay below. The ride is half the attraction.</span></li>
+      <li><span class="t">13:15</span><span class="ev">🦫 <strong>AniTouch, Aqua City Odaiba (3F)</strong> — the capybaras, who spend their days <strong>soaking in clawfoot bathtubs</strong>. Pet them, and feed them for ¥200 a serving. Owls, hedgehogs and friends too. ¥1,800 adults / <strong>¥1,000 children</strong>, no booking needed. <span class="kid">Mind fingers — their front teeth are stronger than they look.</span></span></li>
+      <li><span class="t">14:45</span><span class="ev">🎮 <strong>Round1 Stadium, DiverCity</strong> (short walk) — a multi-floor games and sports arcade. If you're happy to leave the girls to it, DiverCity is a huge warm mall and you two can work the other floors in peace.</span></li>
+      <li><span class="t">16:30</span><span class="ev"><span class="sun">☀ Sun's down — go indoors.</span> Yurikamome on to <strong>Shin-Toyosu</strong>, one minute from the door.</span></li>
+      <li><span class="t">17:00</span><span class="ev">🌌 <strong>teamLab Planets</strong> — barefoot through knee-deep water with digital koi swimming round your legs, mirrored infinity rooms, a hall of floating orbs. Allow 2–2.5 hrs. <strong>Wear trousers you can roll above the knee</strong>; towels provided. <span class="pill">book ahead — sells out</span></span></li>
+      <li><span class="t">19:45</span><span class="ev">Back to Ginza for a farewell dinner. The winter <strong>illuminations</strong> are lit by now at <strong>Caretta Shiodome</strong>, right by Shimbashi.</span></li>
+    </ul>
+    <div class="base">🛏️ Fresa Inn Ginza-Sanchōme · ⚠️ Odaiba's other petting zoo (Animeal, at DECKS) is <strong>closed Thursdays</strong> — AniTouch is the one open today</div>
+  </div>
+
+  <div class="card day">
+    <div class="dhead"><span class="dnum">Day 10</span><span class="ddate">Fri, Nov 27 — Departure</span><span class="dtag tag-travel">Fly home</span></div>
+    <ul class="sched">
+      <li><span class="t">09:00</span><span class="ev">Slow morning. Last shopping, or a stroll through <strong>Hama-rikyū Gardens</strong> — a beautiful old daimyo garden right between the hotel and the water, ten minutes away.</span></li>
+      <li><span class="t">12:00</span><span class="ev">Lunch, collect luggage.</span></li>
+      <li><span class="t">15:30</span><span class="ev">From <strong>Higashi-Ginza or Shimbashi the Toei Asakusa line runs direct to Haneda</strong> (~30 min). Go earlier than feels necessary — <strong>tax-free refund processing happens at customs before you check in</strong>, and it's a brand-new system as of Nov 1.</span></li>
+      <li><span class="t">19:40</span><span class="ev">✈ <strong>UA 38 to Los Angeles</strong>, arriving LAX the same day at 12:45 PM. お疲れ様でした！</span></li>
+    </ul>
+    <div class="base">✈️ HND → LAX</div>
+  </div>
+
+  <h2 class="section">🎟️ Book-Ahead Checklist</h2>
+  <div class="card">
+    <ul class="check">
+      <li><strong>Ghibli Park (Nov 25)</strong> — O-Sanpo Premium pass, released <strong>Sept 10, 14:00 JST</strong>; ~10:00 Grand Warehouse slot. ~¥7,300 adult / ¥3,650 child.</li>
+      <li><strong>Ghibli Museum (Nov 20)</strong> — Lawson release <strong>Oct 10, 10:00 JST</strong>. <strong>Book the 10:00 entry slot</strong> — Day 3 is built around it.</li>
+      <li><strong>Shibuya Sky (Nov 20)</strong> — reserve an <strong>evening slot ~18:45</strong>. <span class="pill pill-b">night view</span></li>
+      <li><strong>teamLab Planets (Nov 26)</strong> — book a <strong>~17:00 slot</strong>; it regularly sells out. <span class="pill pill-b">Toyosu</span></li>
+      <li><strong>Tokyo Skytree (Nov 19)</strong> — a <strong>~15:45 slot</strong> catches sunset and the lights coming on.</li>
+      <li><strong>Shinkansen seats</strong> — Tokyo→Kyoto, Kyoto→Nagoya, Nagoya→Tokyo. Reserve <strong>oversized-baggage seats</strong> if any bag exceeds 160 cm total dimensions.</li>
+      <li><strong>Visit Japan Web</strong> — register all four a few days before departure.</li>
+    </ul>
+  </div>
+
+  <h2 class="section">💡 Practical Notes</h2>
+  <div class="grid2">
+    <div class="card" style="margin:0">
+      <h3 style="margin-top:0;color:var(--maple)">Getting around</h3>
+      <p style="margin:0">Everyone gets an <strong>IC card (Suica/PASMO)</strong>. <strong>Shimbashi</strong> is your hub — Yamanote, Ginza line, Yokosuka line, the airport-direct Asakusa line and the Yurikamome all meet there. <strong>Skip the JR Pass</strong>; point-to-point Shinkansen tickets are cheaper.</p>
+    </div>
+    <div class="card" style="margin:0">
+      <h3 style="margin-top:0;color:var(--maple)">Working with the short days</h3>
+      <p style="margin:0">Sunrise ~06:25, sunset ~16:30. Outdoor and temple things before 16:30; shopping, food and neon after. Jet lag makes 6 AM starts effortless for the first three days — use them.</p>
+    </div>
+    <div class="card" style="margin:0">
+      <h3 style="margin-top:0;color:var(--maple)">Weather</h3>
+      <p style="margin:0">Crisp and mostly sunny — roughly <strong>7–16°C (45–61°F)</strong>, colder by the sea in Kamakura. Layers, a warm jacket, and shoes you can walk 20,000 steps in. Peak <strong>autumn foliage</strong>.</p>
+    </div>
+    <div class="card" style="margin:0">
+      <h3 style="margin-top:0;color:var(--maple)">With the girls</h3>
+      <p style="margin:0">Build in snack breaks — the hotel's <strong>free morning snack (6:30–9:00)</strong> covers quick starts and convenience stores are everywhere. A <strong>coin purse</strong> each makes gachapon and souvenirs their own adventure.</p>
+    </div>
+  </div>
+
+  <div class="foot">Japan · November 2026 · flexible by design — swap any day to match energy and weather 🍁</div>
+</div>
+</body>
+</html>
